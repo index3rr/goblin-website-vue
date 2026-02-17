@@ -11,7 +11,7 @@ function showAlert() {
   <div class="content">
 
     <GlassContainer block="flex" title="Luna" height="150px" class="person" id="luna" @click="showAlert">
-      <img src="luna.jpg" class="person-image">
+      <img src="assets/luna.jpg" class="person-image">
       <div class="vertical-text-container">
         <h3>Luna's Rules:</h3>
         <ul>
@@ -24,7 +24,7 @@ function showAlert() {
     </GlassContainer>
 
     <GlassContainer block="flex" title="Carter" height="150px" class="person" id="carter" @click="showAlert">
-      <img src="carter.jpg" class="person-image">
+      <img src="assets/carter.jpg" class="person-image">
       <div class="vertical-text-container">
         <h3>Carters's Rules:</h3>
         <ul>
