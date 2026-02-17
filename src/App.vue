@@ -1,7 +1,31 @@
 <script setup>
-function showAlert() {
-  alert('Clicked');
+import { ref, onMounted } from 'vue';
+function increment(name) {
+  fetch('https://the-swear-jar.netlify.app/.netlify/functions/violation', 
+  { method: 'POST', headers: 
+  { 'Content-Type': 'application/json' }, 
+  body: JSON.stringify({ name: name }) })
+  .then(response => alert((response.status==200) ? "Voted!" : "FAILED, KILL LUNA NOW!!!"));
+  //location.reload();  
 }
+
+const counts = ref([]);
+const fetchData = async () => {
+  try {
+    const response = await fetch('https://the-swear-jar.netlify.app/.netlify/functions/get-counts');
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const data = await response.json();
+    counts.value = data.data;
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+};
+
+onMounted(() => {
+  fetchData();
+});
 </script>
 
 <template>
@@ -10,10 +34,10 @@ function showAlert() {
   <hr>
   <div class="content">
 
-    <GlassContainer block="flex" title="Luna" height="150px" class="person" id="luna" @click="showAlert">
+    <GlassContainer block="flex"  height="150px" class="person" id="luna" @click="increment('luna-test')">
       <img src="@/assets/luna.jpg" class="person-image">
       <div class="vertical-text-container">
-        <h3>Luna's Rules:</h3>
+        <h3>({{ counts['luna-test'] }} Violations) Luna's Rules:</h3>
         <ul>
           <li>You snaps cant squeak or whatever uh thats hte only one i remember also</li>
           <li>no one can talk about peoples moms</li>
@@ -23,10 +47,10 @@ function showAlert() {
       <ClickableGlass block="flex" class="report-button" title="REPORT VIOLATION!"></ClickableGlass>
     </GlassContainer>
 
-    <GlassContainer block="flex" title="Carter" height="150px" class="person" id="carter" @click="showAlert">
+    <GlassContainer block="flex" title="Carter" height="150px" class="person" id="carter" @click="increment('carter-test')">
       <img src="@/assets/carter.jpg" class="person-image">
       <div class="vertical-text-container">
-        <h3>Carters's Rules:</h3>
+        <h3>({{ counts['carter-test'] }} Violations) Carters's Rules:</h3>
         <ul>
           <li>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa</li>
           <li>u<h1>fahsfahkjd</h1>m</li>

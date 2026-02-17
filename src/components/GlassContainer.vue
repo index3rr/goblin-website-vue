@@ -39,6 +39,7 @@ export default {
 <style scoped>
 .frosted-glass-container {
   background-image: url('../assets/nnnoise.svg');
+  background-color: rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(3px);
   box-shadow: 0 4px 32px rgba(0, 0, 0, 0.25);
