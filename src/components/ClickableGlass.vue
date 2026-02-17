@@ -10,7 +10,7 @@
         @click="toggleExpand"
         >
         <div class="title">{{ title }}</div>
-        <div class="content" :class="{ 'expanded': isExpanded, 'collapsed': !isExpanded }" onclick="event.stopPropagation()">
+        <div class="content" :class="{ 'expanded': isExpanded, 'collapsed': !isExpanded }" onclick="if (this.expandable) {event.stopPropagation()}">
           <slot />
         </div>
       </GlassContainer>
@@ -35,8 +35,8 @@
         default: 'auto',
       },
       block: {
-        type: Boolean,
-        default: true,
+        type: String,
+        default: "inline-block",
       },
       expandable: {
         type: Boolean,
@@ -78,12 +78,13 @@
   
   .title {
     font-weight: bold;
-    margin-bottom: 10px;
+    
     z-index: 2;
     position: relative;
   }
   
   .content {
+    margin-top: 10px;
     overflow: hidden;
     opacity: 0;
   }

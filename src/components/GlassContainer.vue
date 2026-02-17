@@ -20,8 +20,8 @@ export default {
       default: 'auto' // Default to 'auto' for fitting content
     },
     block: {
-      type: Boolean,
-      default: true // Default to inline-block for fitting content
+      type: String,
+      default: 'inline-block' // Default to inline-block for fitting content
     }
   },
   computed: {
@@ -29,7 +29,7 @@ export default {
       return {
         width: this.width,
         height: this.height,
-        display: this.block ? 'inline-block' : 'inline' // Use inline-block by default
+        display: this.block // Use inline-block by default
       };
     }
   }
@@ -38,10 +38,10 @@ export default {
 
 <style scoped>
 .frosted-glass-container {
-  background: rgba(25, 25, 25, 0.1);
+  background-image: url('../assets/nnnoise.svg');
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(3px);
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   padding: 20px;
   position: relative;

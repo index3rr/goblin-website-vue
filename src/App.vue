@@ -1,78 +1,47 @@
-<template>
-  <GlassContainer width="40%"><h1>securly.com.webcr.top</h1>
-  weeblewobble</GlassContainer><br>
-  <hr>
-  <GlassContainer><h1>THIS WEBSITE IS BEING REMOVED SOON!!!!!!!!!!!!!!!!!!!</h1><br>
-    im moving all of this to a google document because thats unblockable, plus its easier to make on a school computer LMAO,<br>
-    <ClickableGlass><h1><a href="https://docs.google.com/document/d/13rMCJmnkg_RiUcp2TgARzXWF9ILp70TOW-k0C6tnfOQ/">Go to the Document</a></h1></ClickableGlass></GlassContainer><br>
-    
-  <div class="content" width="100%">
-    
-    <GlassContainer id="dropdowns">
-      <ClickableGlass title="DragMark (if javascript is blocked)" expandable="true" width="90%">
-        1. create a bookmark to a link that's blocked (like <a href="securly.com.webcr.top">securly.com.webcr.top</a>) by just editing any bookmark and changing the URL to something<br>
-        2. on a non-blocked page, drag the bookmark into the center of the screen<br>
-        3. PROFIT!!!<br>
-        If you arent using securly and this works for you contact me using the form/email below so i can label this accordingly
-      </ClickableGlass>
-      <ClickableGlass title="Cookie Corruption (securly)" expandable="true" width="90%">
-        1. create a bookmark for any page, and right click on it and select edit.<br>
-        2. paste the text below into the "url" box<br>
-        <input type="text" readonly value="javascript:document.cookie=&#039;crextn_clear_cache_at=:;expires=Fri, 31 Dec 9999 23:59:59 GMT;path=/&#039;;"><br>
-        3. when you are on the securly blocked screen, click the bookmark<br>
-        If it does nothing and websites are still blocked, your school has javascript URLs disabled. thats too bad :/ let me know at the contact section so i can get a sense of how many people this effects.
-        
-      </ClickableGlass>
-     
-     
-      
-      <ClickableGlass title="omadadns (all filter extensions)" expandable="true" width="90%">
-        https://docs.titaniumnetwork.org/kajigs/omadadns/
-      </ClickableGlass>
-      <ClickableGlass title="Funny little js thingies!" expandable="true" width="90%">
-        to use these you gotta make a bookmark, edit it and paste the thing below as the url, then just click the bookmark to activate the thingy<br>
-        <ul>
-          <h3>website editor</h3>
-          <li><input type="text" readonly value="javascript:document.body.contentEditable = true;"></li>
-          <h3>the hydraulic press</h3>
-          <li><input type="text" readonly value="javascript:(function(){var all=document.getElementsByTagName(&quot;*&quot;);var depth=window.prompt(&quot;What depth should the crushing happen at? [leave empty for default] (how many nested elements does an element need to be considered ineligible for crushing)&quot;);function depthCheck(number,element){if(element.getAttribute(&quot;crushable&quot;)){return true;}if(element.children.length&gt;0){if(number==0){return false;}for(var childIndex=0;childIndex&lt;element.children.length;childIndex++){var childCheck=depthCheck(number-1,element.children[childIndex]);if(childCheck==false){return false;}}}element.setAttribute(&quot;crushable&quot;,&quot;&quot;);return true;}var accel=0.1;var intervalTime=500;var accelRate=1.05;var minInterval=10;for(var i=0,max=all.length;i&lt;max;i++){if(!depthCheck(depth,all[i])){console.log(&quot;Failed Depth Check...&quot;);continue;}console.log(&quot;Depth Check Succeeded:&quot;);var element=all[i];var f=element.getBoundingClientRect();element.style.top=f[&quot;y&quot;]+&quot;px&quot;;element.style.left=f[&quot;x&quot;]+&quot;px&quot;;element.style.width=f[&quot;width&quot;]+&quot;px&quot;;element.style.height=f[&quot;height&quot;]+&quot;px&quot;;element.style.position=&quot;absolute !important&quot;;(function crushElement(l,el){var crushInterval=setInterval(function(){var speed=accel*3/400000+300;console.log(&quot;Crushing at speed:&quot;,speed);el.style.top=Math.max(el.style.top.slice(0,-2)-speed,0)+&quot;px&quot;;el.style.left=Math.max(el.style.left.slice(0,-2)-speed,0)+&quot;px&quot;;el.style.width=Math.max(el.style.width.slice(0,-2)-speed/20,0)+&quot;px&quot;;el.style.height=Math.max(el.style.height.slice(0,-2)-speed/20,0)+&quot;px&quot;;accel+=0.1;intervalTime=Math.max(intervalTime*accelRate,minInterval);if(el.style.width===&quot;0px&quot;&amp;&amp;el.style.height===&quot;0px&quot;){clearInterval(crushInterval);}},intervalTime);})(i,element);}})();"></li>
-          <h3>rainbowifier</h3>
-          <li><input type="text" readonly value="javascript:(function(){var speed=prompt(&quot;Enter the animation speed in seconds (default is 5):&quot;,&quot;5&quot;);if(speed===null||speed.trim()===&quot;&quot;||isNaN(speed)){speed=5;}var css=`*:not(img):not(svg){background-image:linear-gradient(270deg,#FF0000,#FF7F00,#FFFF00,#00FF00,#0000FF,#4B0082,#8B00FF);animation:rainbow%20${speed}s%20infinite;background-size:400%%20400%;color:white!important;}@keyframes%20rainbow{0%{background-position:0%%2050%;}50%{background-position:100%%2050%;}100%{background-position:0%%2050%;}}%60;var%20style=document.createElement('style');style.appendChild(document.createTextNode(css));document.head.appendChild(style);})();"></li>
-          
-          </ul>
-      </ClickableGlass>
-       <ClickableGlass title="contact me! right here! do it here! contact mE HERE THORUGH HERE" expandable="true" width="90%">
-        email (CONTACT ONLY FROM PERSONAL EMAIL AND NOT SCHOOL EMAIL) - striped_dibble_0j@icloud.com<br>
-        might be a little till I can respond this email is filled with random junk<br>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLqEHJD8R4O1glfQbgEHi2gXgLwmu2lgD2R0zSn6Lbm8M4-Q/viewform?usp=sf_link">form for contacting if personal email is not availible</a>
-      </ClickableGlass>
-    </GlassContainer>
-    <GlassContainer block="false" width="350px" height="100%" id="faq">
-      <h1>FAQ</h1>
-      <h3>none of these work???!?!?</h3>
-      if truely none of them work for you, contact me through the contact form/email and let me know with details of what extension you have and what you tried.
-      <h3>why do I have to keep doing cookie corruption</h3>
-      seemingly, the cookies of securly expire after a bit and so youll have to redo the exploit thats why i have you bookmark it now you just gotta click the bookmark to redo it!
-    <h3>Why "securly.com.webcr.top"?</h3>
-      back in my day having securly.com in your domain name unblockable, that is no longer the case, its now just an artifact of an earlier time
-     <h3>working on anything?</h3>
-      mayb... chrome://chrome-signin
-      <h3>who are you</h3>
-      im batman >:3
-      <h3><img src="https://i.ibb.co/mtqRdcc/rude-paul.jpg" width="10%">?</h3>
-      Yes.
-      </GlassContainer>
-  </div>
-  <a href="https://www.freecounterstat.com" title="website hit counter"><img src="https://counter6.optistats.ovh/private/freecounterstat.php?c=kh4buumncxpqza4twz3zezubdtakx1yl" border="0" title="website hit counter" alt="website hit counter"></a>
+<script setup>
+function showAlert() {
+  alert('Clicked');
+}
+</script>
 
+<template>
+  <GlassContainer width="40%"><h1>The COUNT</h1>
+  You are signed in as: The ultimate arbitor of truth</GlassContainer><br>
+  <hr>
+  <div class="content">
+
+    <GlassContainer block="flex" title="Luna" height="150px" class="person" id="luna" @click="showAlert">
+      <img src="luna.jpg" class="person-image">
+      <div class="vertical-text-container">
+        <h3>Luna's Rules:</h3>
+        <ul>
+          <li>You snaps cant squeak or whatever uh thats hte only one i remember also</li>
+          <li>no one can talk about peoples moms</li>
+          <li>um... i dont remember</li>
+        </ul>
+      </div>
+      <ClickableGlass block="flex" class="report-button" title="REPORT VIOLATION!"></ClickableGlass>
+    </GlassContainer>
+
+    <GlassContainer block="flex" title="Carter" height="150px" class="person" id="carter" @click="showAlert">
+      <img src="carter.jpg" class="person-image">
+      <div class="vertical-text-container">
+        <h3>Carters's Rules:</h3>
+        <ul>
+          <li>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa</li>
+          <li>u<h1>fahsfahkjd</h1>m</li>
+          <li>um</li>
+        </ul>
+        what is going on 
+        <h1>fahsfahkjd</h1>
+      </div>
+      <ClickableGlass block="flex" class="report-button" title="REPORT VIOLATION!"></ClickableGlass>
+    </GlassContainer>
+
+  </div>
 </template>
 
 <script>
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "q7qjmmclvo");
 
 import ClickableGlass from './components/ClickableGlass.vue';
 import GlassContainer from './components/GlassContainer.vue'
@@ -101,44 +70,64 @@ pre {
 ul {
   text-align: left;
 }
-  
-#dropdowns {
-  max-width:100%;
-  flex:1;
-  box-sizing: border-box;
-  overflow-x: hidden;
-  margin: 25px;
-  
-}
 
-#faq {
-  box-sizing: border-box;
-  margin: 25px;
-}
 
-.flex {
-  display: flex
-}
-  
 .content {
-  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
-h1 {
-  font-size: 50px
+
+.report-button {
+  display:flex;
+  height:100% !important;
+  margin-left: auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
 }
-h2 {}
+
+.vertical-text-container {
+    /* span the editor's content automatically above multiple columns: */
+    -webkit-columns: 200px 2;
+    /* Chrome, Safari1 Opera */
+    -moz-columns: 100px 2;
+    /* Firefox */
+    columns: 100px 2;
+    -webkit-column-gap: 5px;
+    -moz-column-gap: 5px;
+    column-gap: 5px;
+    word-break: break-word;
+    white-space: normal;
+}
+
+.person-image {
+  object-fit: contain;
+}
+
+.person {
+  height: 150px;
+  width: 100%;
+  
+  display:flex;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 900px;
+}
+
 body {
   overflow-x: hidden;
   margin: 0px !important;
-  /*image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
-    /*image-rendering: -moz-crisp-edges;          /* Firefox                        */
-    /*image-rendering: -o-crisp-edges;            /* Opera                          */
-    /*image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
-    /*image-rendering: pixelated;                 /* Universal support since 2021   */
-    /*image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
-    /*-ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+  image-rendering: optimizeSpeed;             
+    image-rendering: -moz-crisp-edges;                               
+    image-rendering: -o-crisp-edges;                                
+    image-rendering: -webkit-optimize-contrast; 
+    image-rendering: pixelated;                 
+    image-rendering: optimize-contrast;        
+    -ms-interpolation-mode: nearest-neighbor;                 
 
-  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c3c11a4e-961b-47ec-8f72-acebce4c4562/dgd7lna-ac16f51b-e974-4b8b-b354-66bb9888ad37.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2MzYzExYTRlLTk2MWItNDdlYy04ZjcyLWFjZWJjZTRjNDU2MlwvZGdkN2xuYS1hYzE2ZjUxYi1lOTc0LTRiOGItYjM1NC02NmJiOTg4OGFkMzcucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ZktKEgi_XeABq25KljzOESRh6vMPb-MIJH0D9xufths');
+  background-image: url('assets/background.gif');
   background-size: cover;
   height: 100vh;
   padding:0;
