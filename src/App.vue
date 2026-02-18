@@ -21,7 +21,8 @@ function increment(name) {
   { method: 'POST', headers: 
   { 'Content-Type': 'application/json' }, 
   body: JSON.stringify({ name: name }) })
-  fetchData()
+  alert("sent, do not click again unless you are certain its not updating")
+  setTimeout(() => {fetchData();}, 1000)
 }
 
 function submitPayment() {
@@ -43,12 +44,13 @@ function submitPayment() {
   .then(() => {
     amountInput.value = '1.00';
     alert("payment reccieved prolly")
-    fetchData();
+    setTimeout(() => {fetchData();}, 1000)
   })
 }
 
 onMounted(() => {
   fetchData();
+  setInterval(() => {fetchData();}, 10000)
 });
 </script>
 
