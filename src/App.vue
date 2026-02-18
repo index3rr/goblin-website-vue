@@ -45,10 +45,6 @@ function submitPayment() {
     alert("payment reccieved prolly")
     fetchData();
   })
-  .catch(error => {
-    console.error('Error submitting payment:', error);
-    alert('Failed to submit payment');
-  });
 }
 
 onMounted(() => {
@@ -65,20 +61,20 @@ onMounted(() => {
     <GlassContainer block="flex"  height="150px" class="person" id="luna">
       <img src="@/assets/luna.jpg" class="person-image">
       <div class="vertical-text-container">
-        <h3>${{ counts['luna-test']?.amountPaid || 0 }}/{{ counts['luna-test']?.violations * 25 || 0 }} Total<br>Luna's Rules:</h3>
+        <h3>${{ counts['luna']?.amountPaid || 0 }}/{{ counts['luna']?.violations * 25 || 0 }} Total<br>Luna's Rules:</h3>
         <ul>
           <li>You snaps cant squeak or whatever uh thats hte only one i remember also</li>
           <li>no one can talk about peoples moms</li>
           <li>um... i dont remember</li>
         </ul>
       </div>
-      <ClickableGlass block="flex" class="report-button" title="REPORT VIOLATION!" @click="increment('luna-test')"></ClickableGlass>
+      <ClickableGlass block="flex" class="report-button" title="REPORT VIOLATION!" @click="increment('luna')"></ClickableGlass>
     </GlassContainer>
 
     <GlassContainer block="flex" title="Carter" height="150px" class="person" id="carter" >
       <img src="@/assets/carter.jpg" class="person-image">
       <div class="vertical-text-container">
-        <h3>${{ counts['carter-test']?.amountPaid || 0 }}/{{ counts['carter-test']?.violations * 25 || 0 }} Total<br>
+        <h3>${{ counts['carter']?.amountPaid || 0 }}/{{ counts['carter']?.violations * 25 || 0 }} Total<br>
           Carters's Rules:</h3>
         <ul>
           <li>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa</li>
@@ -88,7 +84,7 @@ onMounted(() => {
         what is going on 
         <h1>fahsfahkjd</h1>
       </div>
-      <ClickableGlass block="flex" class="report-button" title="REPORT VIOLATION!" @click="increment('carter-test')"></ClickableGlass>
+      <ClickableGlass block="flex" class="report-button" title="REPORT VIOLATION!" @click="increment('carter')"></ClickableGlass>
     </GlassContainer>
 
     <GlassContainer block="flex" height="100px" class="payment">
