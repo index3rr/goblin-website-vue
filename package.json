@@ -1,7 +1,7 @@
 {
-  "name": "goblin-website-vue",
-  "version": "0.1.0",
-  "private": true,
+  "name": "the-swear-jar",
+  "version": "1.0.0",
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

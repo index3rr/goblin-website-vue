@@ -61,7 +61,7 @@ onMounted(() => {
     <GlassContainer block="flex"  height="150px" class="person" id="luna">
       <img src="@/assets/luna.jpg" class="person-image">
       <div class="vertical-text-container">
-        <h3>${{ counts['luna']?.amountPaid || 0 }}/{{ counts['luna']?.violations * 25 || 0 }} Total<br>Luna's Rules:</h3>
+        <h3>${{ counts['luna']?.amountPaid || 0 }}/{{ counts['luna']?.violations * .25 || 0 }} Total<br>Luna's Rules:</h3>
         <ul>
           <li>You snaps cant squeak or whatever uh thats hte only one i remember also</li>
           <li>no one can talk about peoples moms</li>
@@ -74,7 +74,7 @@ onMounted(() => {
     <GlassContainer block="flex" title="Carter" height="150px" class="person" id="carter" >
       <img src="@/assets/carter.jpg" class="person-image">
       <div class="vertical-text-container">
-        <h3>${{ counts['carter']?.amountPaid || 0 }}/{{ counts['carter']?.violations * 25 || 0 }} Total<br>
+        <h3>${{ counts['carter']?.amountPaid || 0 }}/{{ counts['carter']?.violations * .25 || 0 }} Total<br>
           Carters's Rules:</h3>
         <ul>
           <li>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa</li>
